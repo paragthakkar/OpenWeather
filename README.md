@@ -1,5 +1,5 @@
 # OpenWeather
-## Automation of OpenWeather Web Application using Selenium and Bdd Framework (Cucumber)
+## Automation of OpenWeather Web Application using Selenium and BDD Framework (Cucumber)
 
 ## Table of contents
 * [General info](#general-info)
@@ -16,7 +16,7 @@ Project is created with:
 * Page Object Model
 * JUnit
 * Extent Reporting
-* Test Listeners
+* WebDriver Event Listener
 * Rest Assured
 
   

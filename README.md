@@ -1,4 +1,4 @@
-# Project Title
+# OpenWeather
 ## Automation of OpenWeather Web Application using Selenium and Bdd Framework (Cucumber)
 
 ## Table of contents

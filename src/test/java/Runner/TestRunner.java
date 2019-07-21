@@ -37,7 +37,7 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		
 		//tags lets you select which scenarios to run, they are declared in feature file
-		tags = {"@Test4"},
+		tags = {"@Test1,@Test2,@Test3"},
 		
 		//this will ensure that the execution will only happen if all the step definitions are there for all features
 		strict = true

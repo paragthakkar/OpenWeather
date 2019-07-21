@@ -107,7 +107,7 @@ public class HomePageStepDefinitions extends TestBase {
 	//so this can be used to closed the session post every scenario
 	@After
 	public void closeBrowser() {
-		//homePage.closeApplication();
+		homePage.closeApplication();
 	}
 	
 	@Given("^I have the url as \"([^\"]*)\"$")

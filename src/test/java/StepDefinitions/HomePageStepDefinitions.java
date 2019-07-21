@@ -19,7 +19,10 @@ import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import junit.framework.Assert;
+import static io.restassured.RestAssured.*;
 
 public class HomePageStepDefinitions extends TestBase {
 
@@ -27,6 +30,7 @@ public class HomePageStepDefinitions extends TestBase {
 	WebDriver driver;
 	WebElement searchCityText;
 	WebElement btnSearch;
+	Response res;
 	
 	//Create an instance of HomePage class to call the HomePage actions
 	HomePage homePage = new HomePage();
@@ -103,6 +107,21 @@ public class HomePageStepDefinitions extends TestBase {
 	//so this can be used to closed the session post every scenario
 	@After
 	public void closeBrowser() {
-		homePage.closeApplication();
+		//homePage.closeApplication();
+	}
+	
+	@Given("^I have the url as \"([^\"]*)\"$")
+	public void i_have_the_url_as(String arg1) throws Throwable {
+		given().contentType(ContentType.JSON);
+	}
+
+	@When("^I perform the GET operation on the URL \"([^\"]*)\"$")
+	public void i_perform_the_GET_operation_on_the_URL(String arg1) throws Throwable {
+		res = when().get(arg1);
+	}
+
+	@Then("^I should get the valid response code$")
+	public void i_should_get_the_valid_response_code() throws Throwable {
+		res.then().statusCode(200);
 	}
 }

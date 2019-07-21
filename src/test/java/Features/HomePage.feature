@@ -42,5 +42,12 @@ Feature: Verify various functionalities of the OpenWeather Application
 		And clicks on the search button
 		Then Website successfully returns the weather details for the entered city
 		
+	@Test4
+	Scenario: Verify the response code for an API
+		
+		Given I have the url as "https://google.com"
+		When I perform the GET operation on the URL "https://google.com"
+		Then I should get the valid response code
+		
 	
 		

@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.com/paragthakkar/OpenWeather.svg?branch=master)](https://travis-ci.com/paragthakkar/OpenWeather)
-
 # OpenWeather 
 ## Automation of OpenWeather Web Application using Selenium and BDD Framework (Cucumber)
 

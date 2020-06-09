@@ -38,7 +38,7 @@ public class TestReport extends TestBase {
 				System.getProperty("user.dir") + "/Reports/OpenWeatherTestReport.html");
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Hostname", "OpenWeather");
-		extent.setSystemInfo("Browser Name", prop.getProperty("browser"));
+		extent.setSystemInfo("Browser Name", System.getProperty("browser"));
 		extent.setSystemInfo("OS", "Mac");
 	}
 

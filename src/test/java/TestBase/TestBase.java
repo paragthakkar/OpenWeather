@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -49,16 +50,17 @@ public class TestBase {
 	}
 	
 	//Instantiate the driver object based on browser value passed to properties file
-	public static void initialization() {
+	public static void initialization() throws Exception {
 		
 		//browser value is chrome, so the tests would run in chrome 
-		if(prop.getProperty("browser").equals("chrome")) {
+		if(System.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/chromedriver");
 			driver = new ChromeDriver();
 		}
 		//if you want to run the tests in firefox, kindly configure the geckodriver path as done for chrome driver
-		else if (prop.getProperty("browser").equals("firefox")) {
-			//set the system property for firefox path and instantiate the driver object with firefox object
+		else if (System.getProperty("browser").equals("firefox")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/chromedriver");
+			driver = new FirefoxDriver();
 		}
 		
 		//Register WebDriver listener

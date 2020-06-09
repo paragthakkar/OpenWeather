@@ -1,7 +1,7 @@
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/Utilities/TestUtil.java
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/StepDefinitions/HomePageStepDefinitions.java
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/Runner/TestRunner.java
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/TestListeners/WebEventListener.java
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/Reporting/TestReport.java
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/Pages/HomePage.java
-/Users/paragneelam/eclipse-workspace/CucumberDemoTest/src/test/java/TestBase/TestBase.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/StepDefinitions/HomePageStepDefinitions.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/Runner/TestRunner.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/TestBase/TestBase.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/Pages/HomePage.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/TestListeners/WebEventListener.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/Utilities/TestUtil.java
+/Users/paragneelam/OpenWeather/OpenWeather/src/test/java/Reporting/TestReport.java

@@ -44,6 +44,31 @@ $ clean install
 ```
 And create a Maven Project job in Jenkins and mention the Workspace URL under Build tab, save the job and click Build Now.
 
+Additionally, in case you need to perform cross-browser testing in parallel, then create a pipeline with the below groovy script:
+```
+parallel chrome: {
+    node ('mac') {
+        stage('clone') {
+            git 'https://github.com/paragthakkar/OpenWeather.git'
+        }
+        stage('compile and run') {
+            sh label: 'abc', script: 'mvn -f pom.xml clean test -Dbrowser=chrome'
+        }
+    }
+},
+firefox: {
+    node ('master') {
+        stage('clone') {
+            git 'https://github.com/paragthakkar/OpenWeather.git'
+        }
+        stage('compile and run') {
+            sh label: 'abc', script: 'mvn -f pom.xml clean test -Dbrowser=firefox'
+        }
+    }
+}
+```
+Do take a note that the "chrome" test runs on an agent named as "mac", kindly change the agent label as per your configurations.
+
 ## Contact
 * Name : Parag Thakkar
 * Email : theparagthakkar@gmail.com

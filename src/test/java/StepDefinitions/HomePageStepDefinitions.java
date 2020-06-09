@@ -21,7 +21,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import junit.framework.Assert;
+//import junit.framework.Assert;
+import org.testng.Assert;
 import static io.restassured.RestAssured.*;
 
 public class HomePageStepDefinitions extends TestBase {
